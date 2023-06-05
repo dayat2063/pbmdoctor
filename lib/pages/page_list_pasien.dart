@@ -14,7 +14,7 @@ class pagelistpasien extends StatelessWidget {
         child: ListView(
           children: [
             SizedBox(
-              height: 6881,
+              height: 68,
             ),
             Text(
               'Antrian Pasien',
