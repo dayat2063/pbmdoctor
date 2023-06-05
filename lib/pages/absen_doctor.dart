@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pbmdoctor/pages/pagelistpasien.dart';
+import 'package:pbmdoctor/pages/page_list_pasien.dart';
 import 'package:pbmdoctor/theme.dart';
 import 'package:pbmdoctor/models/navbar.dart';
-import 'package:pbmdoctor/widgets/bottomnavbaritem.dart';
-import 'homepagedoctor.dart';
+import 'package:pbmdoctor/widgets/bottom_navbar_item.dart';
+import 'homepage_doctor.dart';
 
 class Absendoctor extends StatelessWidget {
   @override

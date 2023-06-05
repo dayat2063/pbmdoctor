@@ -15,6 +15,7 @@ class detaillistpasien extends StatelessWidget {
               'Detail Antrian',
               style: blackSemiBoldTextStyle.copyWith(fontSize: 20),
             ),
+            detaillistpasien()
           ],
         ),
       ),

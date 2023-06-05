@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbmdoctor/pages/detaillistpasien.dart';
+import 'package:pbmdoctor/pages/detail_list_pasien.dart';
 import 'package:pbmdoctor/theme.dart';
 
 class pasienlistcard extends StatelessWidget {
