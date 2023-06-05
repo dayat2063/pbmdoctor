@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbmdoctor/theme.dart';
+import 'package:pbmdoctor/widgets/detail_list_cards.dart';
 
 class detaillistpasien extends StatelessWidget {
   @override
@@ -15,7 +16,10 @@ class detaillistpasien extends StatelessWidget {
               'Detail Antrian',
               style: blackSemiBoldTextStyle.copyWith(fontSize: 20),
             ),
-            detaillistpasien()
+            SizedBox(
+              height: 46,
+            ),
+            detailistcards(),
           ],
         ),
       ),
