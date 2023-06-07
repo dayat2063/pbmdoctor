@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pbmdoctor/theme.dart';
+import 'package:pbmdoctor/models/navbar.dart';
+import 'package:pbmdoctor/widgets/bottom_navbar_item.dart';
+import 'homepage_doctor.dart';
+import 'page_list_pasien.dart';
 
 class pages_profil extends StatelessWidget {
   @override
@@ -95,6 +99,77 @@ class pages_profil extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: Container(
+        height: 81,
+        width: 357,
+        decoration: BoxDecoration(
+          color: WhiterColor,
+          border: Border(
+            top: BorderSide(
+              color: greyColor,
+              width: 3,
+            ),
+          ),
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 15.5,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 30,
+                right: 30,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => homepagedoctor(),
+                        ),
+                      );
+                    },
+                    child: Bottomnavbaritem(
+                      Navbar(id: 1, image: 'assets/icons/home_active.png'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => pagelistpasien(),
+                        ),
+                      );
+                    },
+                    child: Bottomnavbaritem(
+                      Navbar(id: 2, image: 'assets/icons/list_unactive.png'),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => pages_profil(),
+                        ),
+                      );
+                    },
+                    child: Bottomnavbaritem(
+                      Navbar(id: 4, image: 'assets/icons/user_unactive.png'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
