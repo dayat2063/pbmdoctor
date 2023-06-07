@@ -78,7 +78,7 @@ class pages_profil extends StatelessWidget {
                   height: 45,
                   child: ElevatedButton(
                     child: Text(
-                      'Edit Profil',
+                      'Logout',
                       style: whiteSemiBoldTextStyle.copyWith(fontSize: 16),
                     ),
                     onPressed: () {},
