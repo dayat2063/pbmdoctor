@@ -4,6 +4,7 @@ import 'package:pbmdoctor/models/berita.dart';
 import 'package:pbmdoctor/models/navbar.dart';
 import 'package:pbmdoctor/pages/absen_doctor.dart';
 import 'package:pbmdoctor/pages/page_list_pasien.dart';
+import 'package:pbmdoctor/pages/page_profil.dart';
 import 'package:pbmdoctor/theme.dart';
 import 'package:pbmdoctor/widgets/acara_cards.dart';
 import 'package:pbmdoctor/widgets/berita_cards.dart';
@@ -171,6 +172,7 @@ class homepagedoctor extends StatelessWidget {
           ],
         ),
       ),
+      //awal tombol menu
       floatingActionButton: Container(
         height: 81,
         width: 357,
@@ -236,8 +238,18 @@ class homepagedoctor extends StatelessWidget {
                           id: 3, image: 'assets/icons/calender_unactive.png'),
                     ),
                   ),
-                  Bottomnavbaritem(
-                    Navbar(id: 4, image: 'assets/icons/user_unactive.png'),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => pages_profil(),
+                        ),
+                      );
+                    },
+                    child: Bottomnavbaritem(
+                      Navbar(id: 4, image: 'assets/icons/user_unactive.png'),
+                    ),
                   ),
                 ],
               ),

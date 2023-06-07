@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pbmdoctor/pages/page_list_pasien.dart';
+import 'package:pbmdoctor/pages/page_profil.dart';
 import 'package:pbmdoctor/theme.dart';
 import 'package:pbmdoctor/models/navbar.dart';
 import 'package:pbmdoctor/widgets/bottom_navbar_item.dart';
@@ -132,8 +133,18 @@ class Absendoctor extends StatelessWidget {
                 Bottomnavbaritem(
                   Navbar(id: 3, image: 'assets/icons/calender_active.png'),
                 ),
-                Bottomnavbaritem(
-                  Navbar(id: 4, image: 'assets/icons/user_unactive.png'),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => pages_profil(),
+                      ),
+                    );
+                  },
+                  child: Bottomnavbaritem(
+                    Navbar(id: 4, image: 'assets/icons/user_unactive.png'),
+                  ),
                 ),
               ],
             ),
