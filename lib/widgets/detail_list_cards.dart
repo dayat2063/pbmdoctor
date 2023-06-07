@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:pbmdoctor/models/detail_list_pasien.dart';
 import 'package:pbmdoctor/theme.dart';
 
 class detailistcards extends StatelessWidget {
+  final Detail_list_pasien detail_list_pasien;
+  detailistcards(this.detail_list_pasien);
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -21,7 +25,7 @@ class detailistcards extends StatelessWidget {
                 Row(
                   children: [
                     Image.asset(
-                      'assets/images/user1.png',
+                      detail_list_pasien.image,
                       width: 70,
                       height: 67,
                     ),
@@ -32,19 +36,19 @@ class detailistcards extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Nama Saya',
+                          detail_list_pasien.nama,
                           style: whiteSemiBoldTextStyle.copyWith(fontSize: 25),
                         ),
                         Text(
-                          '198266534344',
+                          detail_list_pasien.nomorbpjs,
                           style: whiteRegularTextStyle.copyWith(fontSize: 15),
                         ),
                         Text(
-                          'Poli Umum',
+                          detail_list_pasien.poli,
                           style: whiteRegularTextStyle.copyWith(fontSize: 15),
                         ),
                         Text(
-                          '20 menit yang lalu',
+                          detail_list_pasien.waktu,
                           style: whiteRegularTextStyle.copyWith(fontSize: 10),
                         ),
                       ],

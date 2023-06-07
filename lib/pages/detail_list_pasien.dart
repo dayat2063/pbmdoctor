@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pbmdoctor/models/detail_list_pasien.dart';
 import 'package:pbmdoctor/theme.dart';
 import 'package:pbmdoctor/widgets/detail_list_cards.dart';
 import 'homepage_doctor.dart';
@@ -25,7 +26,16 @@ class detaillistpasien extends StatelessWidget {
               SizedBox(
                 height: 46,
               ),
-              detailistcards(),
+              detailistcards(
+                Detail_list_pasien(
+                  id: 2,
+                  image: 'assets/images/images2.png',
+                  nama: '27 maret 2023',
+                  nomorbpjs: 'Masker itu Wajib',
+                  poli: 'gigi',
+                  waktu: 'sore',
+                ),
+              ),
             ],
           ),
         ),
